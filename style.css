@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    width: 600px;
+    height: 400px;
+}
+
+canvas {
+    width: 100%;
+    height: 500px; /* グラフを縦長にする */
+}
+
+#controls {
+    width: 600px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列に分割 */
+    gap: 10px; /* 各チェックボックス間の隙間 */
+    position: relative; /* チェックボックスが地図の後ろに隠れないようにする */
+    z-index: 1; /* チェックボックスを前面に表示 */
+    background-color: white; /* 背景色を追加して地図との視認性を向上 */
+    padding: 10px; /* チェックボックスの周りに余白を追加 */
+    border-radius: 8px; /* チェックボックスエリアの角を丸くする */
+}
+
+.leaflet-container {
+    width: 600px;
+    height: 400px;
+}
+
+.left-container {
+    position: absolute;
+    width: 50%;
+    left: 30px;
+    top: 30px;
+    z-index: 0; /* 地図を後ろに配置 */
+}
+
+.right-container {
+    position: absolute;
+    width: 40%;
+    right: 30px;
+    top: 30px;
+    height: 500px; /* グラフの高さに合わせる */
+}
+
